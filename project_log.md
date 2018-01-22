@@ -210,3 +210,47 @@ As expected, very little work occurred over Christmas.
 Gareth has got the Simulator building and running on Debian.
 
 I have got a loose literature review of relevant papers.
+
+
+2018-01-14
+----------
+First meeting back with Sally.
+
+We had the simulator and the as well as the PS4 controller working, so we were
+able to demonstrate a working Linux build with the physical robot and the
+simulator.
+
+Gareth has passed the build info onto me and given me a quick rundown of how
+to build/execute the simulator.
+
+
+2018-01-15
+----------
+Have gone through the processes of building the simulator.
+The process is complicated due to the required systems being spread over 3
+repositories.
+
+The python shell can interface directly with the simulator or the physical
+robot.
+
+Current goal is to implement some form of SLAM as per the papers I have
+gathered.
+
+
+2018-01-19
+----------
+Had a quick chat with Jon Kerridge.
+He was saying how two of his honours students are working on projects with the
+Thymio II bots, and had hit some snags. 
+Jon's students are trying to use a Java wrapper to send commands to the robots
+via D-bus.
+I told Jon about our progress, and that we ar enow able to use python to send
+commands via D-bus.
+He has asked if myself and Gareth would be in next Wednesday to chat to his
+students.
+
+
+2018-01-22
+----------
+Worked on a rough draft of our report today.
+Introduction boilerplate and a brief introduction to each section.
