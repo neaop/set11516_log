@@ -254,3 +254,32 @@ students.
 ----------
 Worked on a rough draft of our report today.
 Introduction boilerplate and a brief introduction to each section.
+
+
+2018-01-25
+----------
+Found an extremely detailed and useful paper title 'SLAM for Dummies'.
+While the name is somewhat tongue-in-cheek, the paper details clearly how to
+implement SLAM using the Extended Kalman Filter (EKF).
+
+
+2018-01-26
+----------
+There exists an issue with the Thymio II robot's odometry (or lack here of).
+The robots us naive motors that do not track distance travelled, but they can
+utilise simple Dead-Reckoning.
+
+[I have found a software library for the Thymio II][1] that claims to
+implement some form of odometry via software.
+
+
+2018-01-26
+----------
+There exists several paper detailing attempts to deal with the Thymio II's
+lack of odometry, but most are highly experimental.
+
+It seems we have to design some form of calibration or use "magic-numbers" to
+make dead reckoning usable.
+
+
+[1]:http://wiki.ros.org/thymio_navigation_driver
