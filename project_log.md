@@ -273,7 +273,7 @@ utilise simple Dead-Reckoning.
 implement some form of odometry via software.
 
 
-2018-01-26
+2018-01-28
 ----------
 There exists several paper detailing attempts to deal with the Thymio II's
 lack of odometry, but most are highly experimental.
@@ -281,5 +281,42 @@ lack of odometry, but most are highly experimental.
 It seems we have to design some form of calibration or use "magic-numbers" to
 make dead reckoning usable.
 
+
+2018-01-30
+----------
+The two requirements for implementing SLAM are some form of odometry and
+sensors.
+The current goal is to implement some form of Dead reckoning - where you
+estimate the current position of the robot based off of the speed of the
+motors and the time they were moving.
+
+While dead reckoning is not as accurate as odometry, but will still allow for
+SLAM to operate.
+
+The robots in the simulator have a maximum speed of 500 'units' - according to
+Andreas this relates quite accurately to the real robots.
+
+The previous [link][1] contains a git repo that lists a speed coefficient of
+2.93 and wheel radius of 95mm (this is the only measurement that seems
+grounded in reality).
+`
+Using the found metrics, it should be possible to implement a system that will
+allow for approximation of a location in 2D space.
+
+Current steps consist of confirming that the 'magic-numbers' pulled from the
+repo match up with our version.
+
+
+2018-02-06
+----------
+Conducted some preliminary tests with our system to check the authenticity of
+the 'magic-numbers'.
+
+It seems that each of the wheel motors can be issued a target speed, and the
+current speed of each motor can be queried - with them capping out at 500.
+
+Tests need to be conducted to check the speed coefficient is valid, then a
+delta time can be calculated for the distance travelled in a set amount of
+time.
 
 [1]:http://wiki.ros.org/thymio_navigation_driver
