@@ -320,13 +320,137 @@ delta time can be calculated for the distance travelled in a set amount of
 time.
 
 
+2018-02-12
+----------
+So, the speed coef found in the ROS repo has been tested using the Aseba
+simulator, and seems to be accurate, I am however having issues with the
+physical robot as it seems to be listing leftwards as it travels forwards -
+will investigate why and possible solutions.
+
+
+2018-02-21
+----------
+I have taken the robot apart and reassembled it, as I thought the listing may be
+caused by friction between the wheel and body - no resolution yet.
+
+
+2018-02-26
+----------
+Robot listing is not caused by friction, or the tires - tested traction on
+multiple surfaces and leftward curve is still present.
+
+
+2018-03-02
+----------
+Issue with left wheel seems to be related to the power it is receiving?
+Will try simply reducing the power to the right wheel to see if causes
+alignment.
+
+Reducing right wheel speed does reduce listing - for a limited time, as power
+in the battery runs down, the wheels slow and listing happens again.
+
+Rather than reducing the right wheels speed by a constant rate I might be
+able to tie it to the remaining battery power.
+
+
+2018-03-05
+----------
+Trying to base wheel speed off the reaming battery is  a no go it seems - the
+only solution I can consider to stop the listing is to implement some sort of
+alignment grid on the ground and have the robot adjust the speeds itself based
+on its alignment with the grid - this is a hypothetical solution and for
+outside the scope of this project.
+
+It may still be possible to implement dead-reckoning within the simulator -
+but seems it is going to be no-go with the physical robot.
+
+Going to move onto SLAM stage two - mystical detection.
+
+
+2018-03-07
+----------
+Bumped into Andrea ans explained my problem with the dead-reckoning - he said
+he was considering a solution to a similar solution - attaching a mouse to the
+back of the robot and calculating the distance travelled by the amount of pixels
+the mouse moves.
+
+A novel approach - but wont be compatible with the simulator or the listing
+robot.
+
+
+
+2018-03-16
+----------
+Been working with the Infrared sensors - they are almost completely useless.
+The Thymio specification claims they have a range of 10cm, but in reality it
+closer to 5cm.
+
+Going to have to experiment to see if it is going to be possible for the robot
+to avoid objects - never mind map identifying them.
 
 
 
 
+2018-03-29
+---------
+Had a meeting with Gareth about the Thymio's limited capabilities.
+He says it may be possible to hack the simulator, and increase the range of
+the robot's sensors and implement fake odometery.
+
+While this would allow the implementation of SLAM - I do not want to distract
+Gareth from the other work he is doing with the simulator.
 
 
 2018-04-02
 ----------
+Emailed Sally as the it seems that it wont be possible to get a fully
+functional SLAM system in place.  
+Will try to get a meeting with her to
+discuss further.
+
+
+2018-04-05
+----------
+Had a meeting with Sally, discussed the short coming of the Thymio and she
+has reassured me that it is not a issue.
+
+Final deadline has been decided  - 11th of May.
+
+
+2018-04-17
+----------
+Started drafting the final report.
+Using a standard dissertation style layout - as project was primary research
+based.
+Because the project has two distinct sections. It is a simple task to split
+the required sections between us.
+
+Each of us will write the relevant half of the background, methodology,
+evaluation and results, and we will split the reaming sections (intro,
+conclusion, and reflection) at a later date.
+
+Deadlines are starting to pile up, so log entries might become sporadic.
+
+
+2018-05-01
+----------
+Work on report is progressing - made great headway the lit review and
+methodology.
+
+Gareth has shown me some of the results he produced - looking like the
+simulator side of the project is going well.
+
+
+2018-05-08
+----------
+Final week!
+Got almost all of my sections complete, need to incorporate all of them together
+and proof read.
+
+
+
+
+
+
 
 [1]:http://wiki.ros.org/thymio_navigation_driver
