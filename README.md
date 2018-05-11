@@ -319,4 +319,14 @@ Tests need to be conducted to check the speed coefficient is valid, then a
 delta time can be calculated for the distance travelled in a set amount of
 time.
 
+
+
+
+
+
+
+
+2018-04-02
+----------
+
 [1]:http://wiki.ros.org/thymio_navigation_driver
